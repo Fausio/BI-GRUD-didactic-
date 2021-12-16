@@ -1,0 +1,32 @@
+﻿
+@model BI
+@{
+    ViewData["Title"] = "BI Form";
+}
+
+ 
+<div class="text-center">
+    <h1 class="display-4">Editar BI</h1>
+    <form class="row g-3" asp-action="edit" method="post">
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Nome Completo*</label>
+            <input type="text" class="form-control" id="inputEmail4" asp-for="Name">
+        </div>
+        <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Data de Nascimento*</label>
+            <input type="text" class="form-control" id="inputPassword4" placeholder="03/08/2000" asp-for="BirhDate">
+        </div>
+        <div class="col-12">
+            <label for="inputAddress" class="form-label">Número de BI*</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="123456789987654Q" asp-for="BiNumber">
+        </div>
+        <div class="col-12">
+            <label for="inputAddress2" class="form-label">Localização*</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Matola, Cidade da Matola, Matola J" asp-for="Address">
+        </div>
+        <br />
+        <div class="row">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+    </form>
+</div>

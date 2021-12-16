@@ -1,0 +1,43 @@
+﻿@model BI
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+
+<h1 class="display-4">Detalhes do BI</h1>
+<div>
+    <h4>BI</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nome
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            Endereço
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt class="col-sm-2">
+            Numero de BI
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BiNumber)
+        </dd>
+        <dt class="col-sm-2">
+            Data de Nascimento
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BirhDate)
+        </dd>
+    </dl>
+</div>
+<div>
+
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.Id">Eitar</a> |
+
+</div>

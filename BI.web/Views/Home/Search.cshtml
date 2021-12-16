@@ -1,0 +1,53 @@
+﻿@model List<BI>
+
+@{
+    ViewData["Title"] = "BIIndex";
+}
+
+
+<h1 class="display-4">Lista DE BI Pesquisados</h1>
+<p><b>Pesquisa: </b> @ViewBag.Pesquisa</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nome
+            </th>
+            <th>
+                Endereço
+            </th>
+            <th>
+                Numero do BI
+            </th>
+            <th>
+                Data de Nascimento
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BiNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BirhDate)
+                </td>
+                <td>
+                    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a class="btn btn-warning" asp-action="Details" asp-route-id="@item.Id">ver Detalhes</a> |
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Apagar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
