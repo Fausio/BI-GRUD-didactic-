@@ -28,7 +28,7 @@ namespace BI.web.Controllers
         public IActionResult Privacy()
         {
             return View();
-        }   
+        }    
         
         public IActionResult Search(string name)
         {
